@@ -1,7 +1,7 @@
 #pragma once
  #include <QTcpServer>
 
-class QTcpSocket;
+class Connection;
 class Server : public QTcpServer
 {
     Q_OBJECT
@@ -9,11 +9,10 @@ class Server : public QTcpServer
 public:
     Server(QObject* parent = 0);
 
-private slots:
-    void _disconnect();
-    void _sendMessage();
-    void _readMessage();
+protected:
+	//override
+	virtual void incomingConnection(int handle);
 
-private:
-    QTcpSocket *clientConnection;
+signals:
+	void newConnection(Connection*);
 };

@@ -7,6 +7,10 @@ Loader::Loader(QWidget *parent, Qt::WFlags flags)
 , pTcpSocket(NULL)
 {
     setupUi(this);
+
+	lineEdit_serverIp->setText("192.168.1.107");
+	lineEdit_serverPort->setText("4305");
+	lineEdit_user->setFocus(Qt::OtherFocusReason);
 }
 
 Loader::~Loader()
@@ -34,20 +38,7 @@ bool Loader::IsActivedUser(const QString& userName, const QString& password)
     QObject::connect(pTcpSocket, SIGNAL(readyRead()), this, SLOT(_readMessage()));
     QObject::connect(pTcpSocket, SIGNAL(disconnected()), this, SLOT(_disconnect()));
 
-    // find out which IP to connect to
-    QString ipAddress;
-    QList<QHostAddress> ipAddressesList = QNetworkInterface::allAddresses();
-    // use the first non-localhost IPv4 address
-    for (int i = 0; i < ipAddressesList.size(); ++i) {
-        if (ipAddressesList.at(i) != QHostAddress::LocalHost &&
-            ipAddressesList.at(i).toIPv4Address()) {
-                ipAddress = ipAddressesList.at(i).toString();
-                break;
-        }
-    }
-    // if we did not find one, use IPv4 localhost
-    if (ipAddress.isEmpty())
-        ipAddress = QHostAddress(QHostAddress::LocalHost).toString();
+
 
     pTcpSocket->connectToHost(ipAddress, 4305);
     
@@ -95,7 +86,6 @@ void Loader::_sendMessage()
 
     out << (quint16)0;
     out << userInfo.userName;
-    out << userInfo.userIp;
     out.device()->seek(0);
     out << (quint16)(block.size() - sizeof(quint16));
 

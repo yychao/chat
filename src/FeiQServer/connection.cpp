@@ -45,10 +45,6 @@
 Connection::Connection(QObject *parent)
     : QTcpSocket(parent)
 {
-    QObject::connect(this, SIGNAL(readyRead()), this, SLOT(_readMessage()));
-    QObject::connect(this, SIGNAL(disconnected()), this, SLOT(_disconnect()));
-
-    _sendMessage(NULL);
 }
 
 
@@ -58,7 +54,7 @@ void Connection::_disconnect()
     this->deleteLater();
 }
 
-void Connection::_sendMessage(Connection*)
+void Connection::_sendMessage()
 {
     qDebug() << "Connection::_sendMessage";
     QByteArray block;

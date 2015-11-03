@@ -6,7 +6,6 @@
 
 typedef struct _UserInfo {
     QString userName;
-    QString userIp;
 }UserInfo;
 
 class QTcpSocket;

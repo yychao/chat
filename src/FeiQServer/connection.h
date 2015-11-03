@@ -54,11 +54,12 @@ class Connection : public QTcpSocket
     Q_OBJECT
 
 public:
-    Connection(QObject *parent = 0);
+	Connection(QObject *parent = 0);
+
+	void _sendMessage();
 
 private slots:
     void _disconnect();
-    void _sendMessage(Connection*);
     void _readMessage();
 
 private:

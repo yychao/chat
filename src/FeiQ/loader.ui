@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>237</width>
-    <height>147</height>
+    <width>209</width>
+    <height>164</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>90</y>
+     <x>20</x>
+     <y>120</y>
      <width>161</width>
      <height>41</height>
     </rect>
@@ -32,8 +32,8 @@
   <widget class="QLabel" name="label_user">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
+     <x>20</x>
+     <y>10</y>
      <width>54</width>
      <height>12</height>
     </rect>
@@ -48,8 +48,8 @@
   <widget class="QLineEdit" name="lineEdit_user">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>20</y>
+     <x>80</x>
+     <y>10</y>
      <width>113</width>
      <height>20</height>
     </rect>
@@ -58,8 +58,8 @@
   <widget class="QLabel" name="label_password">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>60</y>
+     <x>20</x>
+     <y>40</y>
      <width>54</width>
      <height>12</height>
     </rect>
@@ -74,8 +74,60 @@
   <widget class="QLineEdit" name="lineEdit_password">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>60</y>
+     <x>80</x>
+     <y>40</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_ServerIp">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ServerIp</string>
+   </property>
+   <property name="buddy">
+    <cstring>lineEdit_user</cstring>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_serverIp">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>70</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_ServerPort">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ServerPort</string>
+   </property>
+   <property name="buddy">
+    <cstring>lineEdit_user</cstring>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_serverPort">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>100</y>
      <width>113</width>
      <height>20</height>
     </rect>

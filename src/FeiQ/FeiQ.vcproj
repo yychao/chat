@@ -4,6 +4,7 @@
 	Version="9.00"
 	Name="FeiQ"
 	ProjectGUID="{2B7208E1-885C-4D89-B3E1-A6D8157B4444}"
+	RootNamespace="FeiQ"
 	Keyword="Qt4VSv1.0"
 	TargetFrameworkVersion="0"
 	>
@@ -17,8 +18,8 @@
 	<Configurations>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(SolutionDir)$(PlatformName)\$(ConfigurationName)"
-			IntermediateDirectory="$(SolutionDir)$(PlatformName)\$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)$(ProjectName)\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(SolutionDir)$(ProjectName)\$(PlatformName)\$(ConfigurationName)"
 			ConfigurationType="1"
 			>
 			<Tool
@@ -85,8 +86,8 @@
 		</Configuration>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)$(PlatformName)\$(ConfigurationName)"
-			IntermediateDirectory="$(SolutionDir)$(PlatformName)\$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)$(ProjectName)\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(SolutionDir)$(ProjectName)\$(PlatformName)\$(ConfigurationName)"
 			ConfigurationType="1"
 			>
 			<Tool

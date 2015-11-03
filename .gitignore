@@ -3,10 +3,19 @@
 *.lo
 *.o
 *.obj
+*.ncb
+*.suo
+*.user
 
 # Precompiled Headers
 *.gch
 *.pch
+*.pdb
+*.ilk
+*.idb
+*.dep
+*.htm
+*.manifest
 
 # Compiled Dynamic libraries
 *.so
@@ -26,3 +35,7 @@
 *.exe
 *.out
 *.app
+
+#dir
+src/FeiQ/GeneratedFiles/*
+src/FeiQServer/GeneratedFiles/*

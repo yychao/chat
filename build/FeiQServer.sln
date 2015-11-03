@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FeiQ", "..\src\FeiQ\FeiQ.vcproj", "{2B7208E1-885C-4D89-B3E1-A6D8157B4444}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FeiQServer", "..\src\FeiQServer\FeiQServer.vcproj", "{2B7208E1-885C-4D89-B3E1-A6D8157B4444}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
